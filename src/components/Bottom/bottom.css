@@ -1,0 +1,235 @@
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+  }
+  
+  .details .recentOrders {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+  }
+  
+  .details .cardHeader {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .cardHeader h2 {
+    font-weight: 600;
+    color: var(--blue);
+  }
+
+  .details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .details table thead td {
+    font-weight: 600;
+  }
+
+  .recentCustomers {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+  }
+  .recentCustomers .imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  .recentCustomers .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .recentCustomers table tr td {
+    padding: 12px 10px;
+  }
+  .recentCustomers table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2rem;
+  }
+  .recentCustomers table tr td h4 span {
+    font-size: 14px;
+    color: var(--black2);
+  }
+  .recentCustomers table tr:hover {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    color: var(--white);
+  }
+  .recentCustomers table tr:hover td h4 span {
+    color: var(--white);
+  }
+  
+
+  .image{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 1.2rem;
+    
+
+  }
+  .imgBx{
+    box-sizing: border-box;
+    position:relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 30px;
+    overflow: hidden;
+    
+  }
+  .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  .image .change-img-btn{
+    padding: 5px 15px;
+    border-radius: 15px;
+    width: 70%;
+    background: var(--black1);
+    color: var(--white);
+    border: none;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+  }
+
+  .image .change-img-btn:hover{
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    color: #434343;
+    font-weight: 500;
+
+  }
+
+  .st-details {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+
+    height: auto;
+  }
+  
+  .st-details p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .st-details label {
+    margin-right: 10px;
+    width: 200px;
+    text-align: left;
+  }
+
+  @media (max-width: 991px) {
+    
+    .cardBox {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .image .imgBx{
+      align-items: center;
+      justify-content: center;
+      
+
+    }
+    .cardHeader{
+      gap: 2rem;
+    }
+    .st-details {
+      width: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .details {
+      grid-template-columns: 1fr;
+    }
+    .recentOrders {
+      overflow-x: auto;
+    }
+    .st-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 450px;
+      width: 100%;
+      height: auto;
+    }
+    .details .cardHeader {
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .st-details p {
+      
+
+      align-items: flex-start;
+    }
+    .details .cardHeader {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+  
+    .st-details label {
+      margin-bottom: 5px;
+      width: auto;
+      
+    }
+
+  }
+  
+  @media (max-width: 480px) {
+    .cardBox {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .cardHeader h2 {
+      font-size: 20px;
+    }
+    .user {
+      min-width: 40px;
+    }
+    .st-details label {
+      margin-right: 10px;
+      width: auto;
+    }
+    .st-details span {
+      text-align:right;
+    }
+    
+  }
